@@ -6,6 +6,10 @@ function resolver(app) {
       const response = await profileService.find({});
       return response.data;
     },
+    profile: async(args) => {
+      const response = await profileService.find({query: {firstName: args.firstName}});
+      return response.data;
+    },
     addProfile: async (args) => {
       const document = {
         firstName: args.firstName,
