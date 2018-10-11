@@ -16,6 +16,7 @@ class ProfileStore {
     @action.bound saveProfile() {
       const profile = new Profile(this.values);
       console.log(profile);
+      // this.client.service('api/profile').create(profile);
     }
 }
 

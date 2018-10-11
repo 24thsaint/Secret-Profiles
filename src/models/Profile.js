@@ -1,7 +1,14 @@
+const Zodiac = require('./Zodiac');
+
 class Profile {
   constructor(props) {
     Object.assign(this, props);
   }
+
+  getZodiacSign() {
+    const birthdate = new Date(this.birthdate);
+    return Zodiac.getZodiacFromBirthdate(birthdate);
+  }
 }
 
-export default Profile;
+module.exports = Profile;
