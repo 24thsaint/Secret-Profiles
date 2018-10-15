@@ -7,7 +7,7 @@ function resolver(app) {
       return response.data;
     },
     profile: async(args) => {
-      const response = await profileService.find({query: {firstName: args.firstName}});
+      const response = await profileService.find({query: {_id: args.id}});
       return response.data;
     },
     addProfile: async (args) => {
